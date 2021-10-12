@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import './App.css'
+import Header from './components/ui/Header/Header.js'
+import CocktailGrid from './components/cocktails/CocktailGrid'
 
-function App() {
+const App = () => {
+  //items defines piece of state, characters that come from api; setItems is function to manipulate the state, useState is an empty array by default
+  //loading is true by default, false after it finishes
+  const [items, setItems] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect (() => {
+    const fetchItems = async () => {
+      const result = await axios(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+      `)
+
+      console.log(result.data)
+
+      setItems(result.data)
+      setIsLoading(false)
+    }
+
+    fetchItems()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Header />
+      <CocktailGrid isLoading={isLoading} items={items}/>
     </div>
   );
 }
