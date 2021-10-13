@@ -1,5 +1,6 @@
 import React from "react";
 import "./CocktailGrid.css";
+import CocktailItem from "./CocktailItem";
 
 const CocktailGrid = ({ items, isLoading }) => {
   return isLoading ? (
@@ -7,7 +8,7 @@ const CocktailGrid = ({ items, isLoading }) => {
   ) : (
     <section className="cards">
       {items.map((item) => (
-        <h1>{item.strDrink}</h1>
+        <CocktailItem key={item.idDrink} item={item}></CocktailItem>
       ))}
     </section>
   );
