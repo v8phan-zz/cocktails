@@ -18,12 +18,9 @@ const App = () => {
 
 //https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
-      console.log(result.data)
-
       setItems(result.data.drinks)
       setIsLoading(false)
       console.log(result.data.drinks)
-      console.log(result.data.drinks[0].strDrinks)
     }
 
     fetchItems()
