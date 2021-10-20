@@ -2,14 +2,14 @@ import React from "react";
 import "./CocktailItem.css";
 
 const CocktailItem = ({ item }) => {
-  //console.log(item);
+  console.log(item);
   var ingredients = [];
   var measurements = [];
 
   Object.keys(item).map((drinkProps) => {
     if (item[drinkProps] !== null && drinkProps.includes("strIngredient")) {
       ingredients.push(item[drinkProps]);
-      console.log(ingredients);
+      //console.log(ingredients);
       //return <div>{item[drinkProps]}</div>
     }
   });
@@ -17,7 +17,7 @@ const CocktailItem = ({ item }) => {
   Object.keys(item).map((drinkProps) => {
     if (item[drinkProps] !== null && drinkProps.includes("strMeasure")) {
       measurements.push(item[drinkProps]);
-      console.log(measurements);
+      //console.log(measurements);
     }
   });
 
@@ -33,7 +33,7 @@ const CocktailItem = ({ item }) => {
           <ul>
             <li>
               <strong>Ingredients: </strong>
-              {ingredients.forEach((num1, index) => {
+              {ingredients.map((num1, index) => {
                 const num2 = measurements[index];
                 console.log(num2, num1);
                   return <div>{num2} {num1}</div>
