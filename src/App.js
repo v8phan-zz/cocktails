@@ -16,7 +16,6 @@ const App = () => {
     const fetchItems = async () => {
       const result = await axios(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`)
 
-//https://www.breakingbadapi.com/api/
 
 //https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 

@@ -7,7 +7,7 @@ const CocktailGrid = ({ items, isLoading }) => {
     <h1>Loading...</h1>
   ) : (
     <section className="cards">
-      {items.map((item) => (
+      {items && items.map((item) => (
         <CocktailItem key={item.idDrink} item={item}></CocktailItem>
       ))}
     </section>
