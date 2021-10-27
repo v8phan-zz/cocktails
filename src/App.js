@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./App.css";
 import Header from "./components/ui/Header/Header.js";
 import CocktailGrid from "./components/cocktails/CocktailGrid";
 import Search from "../src/components/ui/Search/Search";
 import Pagination from "./components/ui/Pagination/Pagination";
+
+import 'bootstrap/dist/css/bootstrap.css';
+import "./App.css";
+
 
 const App = () => {
   //items defines piece of state, characters that come from api; setItems is function to manipulate the state, useState is an empty array by default
@@ -22,7 +25,7 @@ const App = () => {
 
       setItems(result.data.drinks);
       setIsLoading(false);
-      //console.log(result.data.drinks)
+      console.log(result.data.drinks)
     };
     fetchItems();
   }, [letter]);
@@ -32,9 +35,6 @@ const App = () => {
       const result = await axios(
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`
       );
-
-      //https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
-
       setItems(result.data.drinks);
       setIsLoading(false);
       //console.log(result.data.drinks)

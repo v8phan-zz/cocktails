@@ -2,40 +2,35 @@ import React from "react";
 import "./CocktailItem.css";
 
 const CocktailItem = ({ item }) => {
-  console.log(item);
   var ingredients = [];
   var measurements = [];
 
   Object.keys(item).map((drinkProps) => {
     if (item[drinkProps] !== null && drinkProps.includes("strIngredient")) {
       ingredients.push(item[drinkProps]);
-      //console.log(ingredients);
-      //return <div>{item[drinkProps]}</div>
     }
   });
 
   Object.keys(item).map((drinkProps) => {
     if (item[drinkProps] !== null && drinkProps.includes("strMeasure")) {
       measurements.push(item[drinkProps]);
-      //console.log(measurements);
     }
   });
 
   return (
-    <div className="card">
-      <div className="card-inner">
-        <div className="card-front">
+    <div className="cardo">
+      <div className="cardo-inner">
+        <div className="cardo-front">
           <img src={item.strDrinkThumb} alt=""></img>
           <h1>{item.strDrink}</h1>
         </div>
-        <div className="card-back">
+        <div className="cardo-back">
           <h1>{item.strDrink}</h1>
           <ul>
             <li>
               <strong>Ingredients: </strong>
               {ingredients.map((num1, index) => {
                 const num2 = measurements[index];
-                console.log(num2, num1);
                   return <div>{num2} {num1}</div>
               })}
             </li>
