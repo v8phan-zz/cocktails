@@ -3,7 +3,8 @@
   background-color: transparent;
   height: 300px;
   perspective: 1000px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .cardo h1 {
@@ -44,7 +45,8 @@
 .cardo-back {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   transform: rotateY(180deg);
   overflow-y: scroll;
 

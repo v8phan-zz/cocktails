@@ -7,7 +7,7 @@ const Pagination = ({ paginate }) => {
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
     return (
-        <nav>
+        <nav class="text-center">
             <ul className="pagination">
                 {alphabet.map(letter => (
                     <li key={letter} className='page-item'> 

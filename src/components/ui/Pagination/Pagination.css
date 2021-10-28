@@ -1,18 +1,7 @@
-.pagination {
-  justify-content: center;
-  margin-top: 26px;
-  border-radius: 5px;
-}
-
-
-.pagination a {
-  color: black;
-  padding: 8px 18px;
-  text-decoration: none;
-  border-radius: 5px;
-  
+.page-link {
+  border-radius: 8px;
 }
 
 .pagination a:hover:not(.active) {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
