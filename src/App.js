@@ -7,6 +7,7 @@ import Pagination from "./components/ui/Pagination/Pagination";
 import MobileDropdown from "./components/ui/Pagination/MobileDropdown";
 
 import "bootstrap/dist/css/bootstrap.css";
+
 import "./App.css";
 
 const App = () => {
@@ -55,12 +56,13 @@ const App = () => {
   }, [query]);
 
   const paginate = (letter) => getLetter(letter);
+  const dropper = (letter) => getLetter(letter)
 
   return width < breakpoint ? (
     <div className="container">
       <Header />
       <Search getQuery={(q) => setQuery(q)} />
-      <MobileDropdown />
+      <MobileDropdown dropper={dropper} />
       <CocktailGrid isLoading={isLoading} items={items} />
     </div>
   ) : (
