@@ -10,7 +10,11 @@
   padding: 0 20px;
 }
 
-
+h2 {
+  color: black;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 /* .App {
   text-align: center;

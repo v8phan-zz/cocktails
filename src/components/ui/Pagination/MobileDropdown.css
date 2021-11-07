@@ -1,0 +1,12 @@
+.dropdown {
+    color: black;
+    display: inline-block;
+    position: relative;
+    left: 25%;
+}
+
+.btn {
+    margin-top: 10px;
+    align-self: flex-end;
+    text-align: center;
+}

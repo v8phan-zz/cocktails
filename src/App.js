@@ -11,8 +11,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 const App = () => {
-  //items defines piece of state, characters that come from api; setItems is function to manipulate the state, useState is an empty array by default
-  //loading is true by default, false after it finishes
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [query, setQuery] = useState("");
@@ -22,10 +20,9 @@ const App = () => {
   const breakpoint = 620;
 
   useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth)
+    const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleWindowResize);
 
-    // Return a function from the effect that removes the event listener
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
@@ -49,29 +46,37 @@ const App = () => {
       );
       setItems(result.data.drinks);
       setIsLoading(false);
-      //console.log(result.data.drinks)
     };
-    //query is a dependency, fires off useEffect whenever it changes
     fetchItems();
   }, [query]);
 
   const paginate = (letter) => getLetter(letter);
-  const dropper = (letter) => getLetter(letter)
+  const dropper = (letter) => getLetter(letter);
 
   return width < breakpoint ? (
     <div className="container">
       <Header />
       <Search getQuery={(q) => setQuery(q)} />
       <MobileDropdown dropper={dropper} />
-      <CocktailGrid isLoading={isLoading} items={items} />
+      {items ? (
+        <CocktailGrid isLoading={isLoading} items={items} />
+      ) : (
+        <h2>No drinks found</h2>
+      )}
     </div>
   ) : (
     <div className="container">
       <Header />
       <Search getQuery={(q) => setQuery(q)} />
-      <CocktailGrid isLoading={isLoading} items={items} />
       <Pagination paginate={paginate} />
-
+      {items ? (
+        <div>
+          <CocktailGrid isLoading={isLoading} items={items} />
+          <Pagination paginate={paginate} />{" "} 
+        </div>
+      ) : (
+        <h2>No drinks found</h2>
+      )}
     </div>
   );
 };

@@ -31,7 +31,11 @@ const CocktailItem = ({ item }) => {
               <strong>Ingredients: </strong>
               {ingredients.map((num1, index) => {
                 const num2 = measurements[index];
-                  return <div>{num2} {num1}</div>
+                return (
+                  <div>
+                    {num2} {num1}
+                  </div>
+                );
               })}
             </li>
             <li>
