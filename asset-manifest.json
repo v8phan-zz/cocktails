@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cocktails/static/css/main.89d4d2b3.chunk.css",
+    "main.css": "/cocktails/static/css/main.477bb5d1.chunk.css",
     "main.js": "/cocktails/static/js/main.a22017fe.chunk.js",
     "main.js.map": "/cocktails/static/js/main.a22017fe.chunk.js.map",
     "runtime-main.js": "/cocktails/static/js/runtime-main.c60c329f.js",
@@ -10,7 +10,7 @@
     "static/js/2.ad868a7d.chunk.js.map": "/cocktails/static/js/2.ad868a7d.chunk.js.map",
     "index.html": "/cocktails/index.html",
     "static/css/2.9c7c4a0c.chunk.css.map": "/cocktails/static/css/2.9c7c4a0c.chunk.css.map",
-    "static/css/main.89d4d2b3.chunk.css.map": "/cocktails/static/css/main.89d4d2b3.chunk.css.map",
+    "static/css/main.477bb5d1.chunk.css.map": "/cocktails/static/css/main.477bb5d1.chunk.css.map",
     "static/js/2.ad868a7d.chunk.js.LICENSE.txt": "/cocktails/static/js/2.ad868a7d.chunk.js.LICENSE.txt",
     "static/media/App.css": "/cocktails/static/media/bg.9b2b7bbc.jpg",
     "static/media/bootstrap.css": "/cocktails/static/media/glyphicons-halflings-regular.be810be3.woff2",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.c60c329f.js",
     "static/css/2.9c7c4a0c.chunk.css",
     "static/js/2.ad868a7d.chunk.js",
-    "static/css/main.89d4d2b3.chunk.css",
+    "static/css/main.477bb5d1.chunk.css",
     "static/js/main.a22017fe.chunk.js"
   ]
 }
