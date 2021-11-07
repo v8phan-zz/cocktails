@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/dranks/static/css/main.7878cee4.chunk.css",
+    "main.js": "/dranks/static/js/main.a22017fe.chunk.js",
+    "main.js.map": "/dranks/static/js/main.a22017fe.chunk.js.map",
+    "runtime-main.js": "/dranks/static/js/runtime-main.99b031f7.js",
+    "runtime-main.js.map": "/dranks/static/js/runtime-main.99b031f7.js.map",
+    "static/css/2.66207fc9.chunk.css": "/dranks/static/css/2.66207fc9.chunk.css",
+    "static/js/2.ad868a7d.chunk.js": "/dranks/static/js/2.ad868a7d.chunk.js",
+    "static/js/2.ad868a7d.chunk.js.map": "/dranks/static/js/2.ad868a7d.chunk.js.map",
+    "index.html": "/dranks/index.html",
+    "static/css/2.66207fc9.chunk.css.map": "/dranks/static/css/2.66207fc9.chunk.css.map",
+    "static/css/main.7878cee4.chunk.css.map": "/dranks/static/css/main.7878cee4.chunk.css.map",
+    "static/js/2.ad868a7d.chunk.js.LICENSE.txt": "/dranks/static/js/2.ad868a7d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/dranks/static/media/bg.9b2b7bbc.jpg",
+    "static/media/bootstrap.css": "/dranks/static/media/glyphicons-halflings-regular.be810be3.woff2",
+    "static/media/logo.341dacae.png": "/dranks/static/media/logo.341dacae.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99b031f7.js",
+    "static/css/2.66207fc9.chunk.css",
+    "static/js/2.ad868a7d.chunk.js",
+    "static/css/main.7878cee4.chunk.css",
+    "static/js/main.a22017fe.chunk.js"
+  ]
+}
